@@ -1,7 +1,40 @@
 "use client";
+import useEmail from "@/hooks/useEmail";
 import React from "react";
+import { useForm } from "react-hook-form";
+import { toast } from "react-toastify";
 
 const ContactForm = () => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset,
+  } = useForm();
+
+  const { sendEmail, loading } = useEmail();
+
+  // Handle form submission
+  const onSubmit = async (data) => {
+    console.log("Form Data Submitted:", data);
+
+    const templateParams = {
+      customer_name: data?.name,
+      customer_email: data?.email,
+      contact_number: data?.mobile,
+      services: data?.services?.join(","),
+      additional_info: data?.additionalInfo,
+    };
+
+    await sendEmail(
+      templateParams,
+      process.env.NEXT_PUBLIC_EMAILJS_OWNER_TEMPLATE_ID
+    );
+
+    reset();
+    toast.success("Your query saved successfully!");
+  };
+
   return (
     <div className="max-w-6xl mx-auto py-16 px-4 md:flex md:space-x-12">
       {/* Form Section */}
@@ -11,27 +44,43 @@ const ContactForm = () => {
         </h4>
         <h2 className="text-3xl font-bold mb-2">Get In Touch Today</h2>
         <p className="text-gray-700 mb-4">
-          Transform your space with YRC Custom Flooring. Let’s create stunning, durable floors tailored to your needs. Contact us today to bring your vision to life!
+          Transform your space with YRC Custom Flooring. Let’s create stunning,
+          durable floors tailored to your needs. Contact us today to bring your
+          vision to life!
         </p>
 
         {/* Contact Form */}
-        <form className="space-y-4">
+        <form className="space-y-4" onSubmit={handleSubmit(onSubmit)}>
           <div className="md:flex md:space-x-4">
             <div className="flex-1">
               <label className="block font-semibold mb-1">Name</label>
               <input
                 type="text"
                 placeholder="Enter your full name"
-                className="w-full border border-green-300 p-2 rounded-md outline-none focus:border-[#0D772F]"
+                {...register("name", { required: "Name is required" })}
+                className={`w-full border ${
+                  errors.name ? "border-red-500" : "border-green-300"
+                } p-2 rounded-md outline-none focus:border-[#0D772F]`}
               />
+              {errors.name && (
+                <p className="text-red-500 text-sm">{errors.name.message}</p>
+              )}
             </div>
             <div className="flex-1">
               <label className="block font-semibold mb-1">Mobile Number</label>
               <input
                 type="tel"
                 placeholder="Enter your mobile number"
-                className="w-full border border-green-300 p-2 rounded-md outline-none focus:border-[#0D772F]"
+                {...register("mobile", {
+                  required: "Mobile number is required",
+                })}
+                className={`w-full border ${
+                  errors.mobile ? "border-red-500" : "border-green-300"
+                } p-2 rounded-md outline-none focus:border-[#0D772F]`}
               />
+              {errors.mobile && (
+                <p className="text-red-500 text-sm">{errors.mobile.message}</p>
+              )}
             </div>
           </div>
 
@@ -40,90 +89,61 @@ const ContactForm = () => {
             <input
               type="email"
               placeholder="Enter your email address"
-              className="w-full border border-green-300 p-2 rounded-md outline-none focus:border-[#0D772F]"
+              {...register("email", {
+                required: "Email is required",
+                pattern: {
+                  value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+                  message: "Enter a valid email address",
+                },
+              })}
+              className={`w-full border ${
+                errors.email ? "border-red-500" : "border-green-300"
+              } p-2 rounded-md outline-none focus:border-[#0D772F]`}
             />
+            {errors.email && (
+              <p className="text-red-500 text-sm">{errors.email.message}</p>
+            )}
           </div>
 
           <div>
-            <label className="block font-semibold mb-1 ">Select Services</label>
+            <label className="block font-semibold mb-1">Select Services</label>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              <label className="flex items-center">
-                <input
-                  type="checkbox"
-                  name="services"
-                  value="Patio Coating"
-                  className="mr-2 accent-[#0D772F]"
-                />
-                Patio Coating
-              </label>
-              <label className="flex items-center">
-                <input
-                  type="checkbox"
-                  name="services"
-                  value="Garage Coating"
-                  className="mr-2 accent-[#0D772F]"
-                />
-                Garage Coating
-              </label>
-              <label className="flex items-center">
-                <input
-                  type="checkbox"
-                  name="services"
-                  value="Concrete Coating"
-                  className="mr-2 accent-[#0D772F]"
-                />
-                Concrete Coating
-              </label>
-              <label className="flex items-center">
-                <input
-                  type="checkbox"
-                  name="services"
-                  value="Driveway Coating"
-                  className="mr-2 accent-[#0D772F]"
-                />
-                Driveway Coating
-              </label>
-              <label className="flex items-center">
-                <input
-                  type="checkbox"
-                  name="services"
-                  value="Pool Deck Coating"
-                  className="mr-2 accent-[#0D772F]"
-                />
-                Pool Deck Coating
-              </label>
-              <label className="flex items-center">
-                <input
-                  type="checkbox"
-                  name="services"
-                  value="Commercial Coating"
-                  className="mr-2 accent-[#0D772F]"
-                />
-                Commercial Coating
-              </label>
-              <label className="flex items-center">
-                <input
-                  type="checkbox"
-                  name="services"
-                  value="Epoxy Flooring Tampa, FL"
-                  className="mr-2 accent-[#0D772F]"
-                />
-                Epoxy Flooring Tampa, FL
-              </label>
-            
+              {[
+                "Patio Coating",
+                "Garage Coating",
+                "Concrete Coating",
+                "Driveway Coating",
+                "Pool Deck Coating",
+                "Commercial Coating",
+                "Epoxy Flooring Tampa, FL",
+              ].map((service) => (
+                <label className="flex items-center" key={service}>
+                  <input
+                    type="checkbox"
+                    {...register("services")}
+                    value={service}
+                    className="mr-2 accent-[#0D772F]"
+                  />
+                  {service}
+                </label>
+              ))}
             </div>
           </div>
 
           <div>
-            <label className="block font-semibold mb-1">Additional Information</label>
+            <label className="block font-semibold mb-1">
+              Additional Information
+            </label>
             <textarea
               placeholder="Provide any additional details about your project"
+              {...register("additionalInfo")}
               className="w-full border border-green-300 p-2 rounded-md outline-none focus:border-[#0D772F] h-24"
             />
           </div>
 
           <button
             type="submit"
+            disabled={loading}
             className="mt-4 px-6 py-2 bg-[#0D772F] text-white font-semibold rounded-md hover:bg-green-700 transition"
           >
             Send Your Enquiry

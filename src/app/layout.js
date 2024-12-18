@@ -4,7 +4,7 @@ import "./globals.css";
 import TopHeader from "./Components/TopHeader/topheader";
 import FooterU from "./Components/Footer/footerU";
 import Navbar from "./Components/Navbar/Navbar1";
-
+import { ToastContainer } from "react-toastify";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,13 +26,24 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-
       >
-        <TopHeader/>
-        <Navbar/>
-        
+        <TopHeader />
+        <Navbar />
+
         {children}
-        <FooterU/>
+        <FooterU />
+
+        <ToastContainer
+          position="top-right"
+          autoClose={3000}
+          hideProgressBar={true}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+        />
       </body>
     </html>
   );
