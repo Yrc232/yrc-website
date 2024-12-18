@@ -99,12 +99,12 @@ Concrete Coating in Tampa, Florida
                   <div className="mt-4 text-lg text-gray-300">
                     {section.description}
                   </div>
-                  <div className="mt-6 sm:mb-10 md:mb-0">
+                  <div className="mt-6 sm:mb-20 md:mb-0 mb-10">
                     {" "}
                     {/* Adjusted bottom margin for small screens */}
                     <a
                       href="tel:+18136790367"
-                      className="inline-flex rounded-lg bg-green-600 px-4 py-1.5 text-base font-semibold leading-7 text-white shadow-sm ring-1 ring-green-600 hover:bg-green-900 hover:ring-green-900"
+                      className="  inline-flex rounded-lg bg-green-600 px-4 py-1.5 text-base font-semibold leading-7 text-white shadow-sm ring-1 ring-green-600 hover:bg-green-900 hover:ring-green-900"
                     >
                       Call Now
                     </a>

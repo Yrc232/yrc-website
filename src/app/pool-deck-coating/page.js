@@ -112,7 +112,7 @@ const ServiceDetailPage = () => {
                   <div className="mt-4 text-lg text-gray-300">
                     {section.description}
                   </div>
-                  <div className="mt-6 sm:mb-10 md:mb-0">
+                  <div className="mt-6 sm:mb-10 md:mb-0 mb-10">
                     {" "}
                     {/* Adjusted bottom margin for small screens */}
                     <a
