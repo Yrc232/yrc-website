@@ -1,9 +1,10 @@
 
 
-import Blog1 from '@/Components/Blog/blog'
+
 import React from 'react'
 
 import { FaLongArrowAltRight } from 'react-icons/fa'
+import Blog1 from '../Components/Blog/blog'
 
 
 const page = () => {
@@ -31,7 +32,7 @@ const page = () => {
 </div>
 </div>
     {/* <Blog/> */}
-    <Blog1/>
+   <Blog1/>
     </div>
   )
 }

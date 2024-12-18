@@ -1,8 +1,9 @@
-import About from '@/Components/About/About';
-import ChooseUsU from '@/Components/ChooseUs/ChooseUsU';
-import ContactForm from '@/Components/Contact/ContactU';
+
 import React from 'react'
 import { FaLongArrowAltRight } from 'react-icons/fa';
+import About from '../Components/About/About';
+import ChooseUsU from '../Components/ChooseUs/ChooseUsU';
+import ContactForm from '../Components/Contact/ContactU';
 
 
 
@@ -31,6 +32,9 @@ const aboutPage = () => {
         </div>
       </div>
       {/* <AboutUs/> */}
+     {/* <About/>
+     <ChooseUsU/>
+     <ContactForm/> */}
      <About/>
      <ChooseUsU/>
      <ContactForm/>

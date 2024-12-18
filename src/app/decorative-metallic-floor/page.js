@@ -2,7 +2,8 @@
 import React from "react";
 import Image from "next/image";
 import { FaLongArrowAltRight } from "react-icons/fa";
-import ContactForm from "@/Components/Contact/ContactU";
+import ContactForm from "../Components/Contact/ContactU";
+
 
 const sections = [
   {
@@ -141,7 +142,7 @@ const ServiceDetailPage = () => {
           </div>
         ))}
       </div>
-      <ContactForm />
+      <ContactForm/>
     </div>
   );
 };

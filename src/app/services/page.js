@@ -1,7 +1,8 @@
 
-import ServiceCardPage from '@/Components/ServiceCardPage/ServiceCardPage';
+
 import React from 'react'
 import { FaLongArrowAltRight } from 'react-icons/fa';
+import ServiceCardPage from '../Components/ServiceCardPage/ServiceCardPage';
 
 
 
