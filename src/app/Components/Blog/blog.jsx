@@ -296,6 +296,61 @@ const blogPosts = [
     link: "/the-top-benefits-of-using-concrete-coating-for-your-pool-deck",
   }
   ,
+  {
+    title:
+      "How Can Pool Deck Repair Enhance Your Outdoor Living Area in Tampa?",
+    image: "/images/How-Can-Pool-Deck-Repair-Enhance-Your-Outdoor-Living-Area-in-Tampa-2.jpg",
+    description:
+      "A properly maintained pool deck can significantly increase the appeal and functionality of your outdoor living space in Tampa. Over time, pool decks may develop cracks, stains,",
+    category: "April 24, 2024",
+    readTime: "",
+    link: "/how-can-pool-deck-repair-enhance-your-outdoor-living-area-in-tampa",
+  }
+  ,
+  {
+    title:
+      "What Is the Typical Duration of Patio Resurfacing in Tampa?",
+    image: "/images/What-Is-the-Typical-Duration-of-Patio-Resurfacing-in-Tampa-2.jpg",
+    description:
+      "Resurfacing patios in Tampa, or any location, may rejuvenate outdoor spaces, converting them into appealing areas for leisure and socializing. But, one of the common questions",
+    category: "April 2, 2024",
+    readTime: "",
+    link: "/what-is-the-typical-duration-of-patio-resurfacing-in-tampa",
+  }
+  ,
+  {
+    title:
+      "How Can Pool Deck Resurfacing Improve Your Home’s Beauty?",
+    image: "/images/How-Can-Pool-Deck-Resurfacing-Improve-Your-Homes-Beauty-2.jpg",
+    description:
+      "Transforming your home’s outdoor space to enhance its beauty and functionality can significantly increase its value and your enjoyment of it. An often neglected element of outdoor beauty",
+    category: "March 26, 2024",
+    readTime: "",
+    link: "/how-can-pool-deck-resurfacing-improve-your-homes-beauty",
+  }
+  ,
+  {
+    title:
+      "Is Epoxy Patio Coating a Durable Option for Concrete?",
+    image: "/images/Is-Epoxy-Patio-Coating-a-Durable-Option-for-Concrete-2.jpg",
+    description:
+      "When it comes to choosing a finishing touch for concrete patios, homeowners often seek solutions that blend durability with aesthetic appeal. Epoxy patio coating",
+    category: "March 21, 2024",
+    readTime: "",
+    link: "/is-epoxy-patio-coating-a-durable-option-for-concrete",
+  }
+  ,
+  {
+    title:
+      "Is Concrete Coating Suitable for Outdoor Surfaces?",
+    image: "/images/Is-Concrete-Coating-Suitable-for-Outdoor-Surfaces-2.jpg",
+    description:
+      "Concrete coating is an excellent way to protect and enhance outdoor surfaces. Whether it’s a driveway, patio, or pool deck, applying a coating can provide numerous benefits,",
+    category: "March 5, 2024",
+    readTime: "",
+    link: "/is-concrete-coating-suitable-for-outdoor-surfaces",
+  }
+  ,
   
 
   // Add more blog posts as needed How Car Detailing Service Can Preserve Your Car’s Value
