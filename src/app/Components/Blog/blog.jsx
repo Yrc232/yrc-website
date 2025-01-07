@@ -351,6 +351,94 @@ const blogPosts = [
     link: "/is-concrete-coating-suitable-for-outdoor-surfaces",
   }
   ,
+  {
+    title:
+      "What Preparations Are Needed Before Applying Metallic Epoxy Coating?",
+    image: "/images/What-Preparations-Are-Needed-Before-Applying-Metallic-Epoxy-Coating-2.jpg",
+    description:
+      "Applying a metallic epoxy coating to your floor can transform a plain surface into a stunning, gleaming work of art. The unique blend of metallic pigments with epoxy resin",
+    category: "February 28, 2024",
+    readTime: "",
+    link: "/what-preparations-are-needed-before-applying-metallic-epoxy-coating",
+  }
+  ,
+  {
+    title:
+      "How Does Commercial Coating Protect Surfaces in Tampa?",
+    image: "/images/How-Does-Commercial-Coating-Protect-Surfaces-in-Tampa-2.jpg",
+    description:
+      "In Tampa, where the sun shines bright and the weather can change a lot, it’s super important for businesses to protect their buildings and stuff. This is where something cool",
+    category: "February 21, 2024",
+    readTime: "",
+    link: "/how-does-commercial-coating-protect-surfaces-in-tampa",
+  }
+  ,
+  {
+    title:
+      "How Do I Select the Exact Pool Deck Coating?",
+    image: "/images/How-Do-I-Select-the-Exact-Pool-Deck-Coating-1.jpg",
+    description:
+      "The pool deck serves as a vital component of your outdoor sanctuary, extending above an isolated relaxation area. Selecting the appropriate coating for your pool deck may improve safety,",
+    category: "February 10, 2024",
+    readTime: "",
+    link: "/how-do-i-select-the-exact-pool-deck-coating",
+  }
+  ,
+  {
+    title:
+      "What Are the Best Garage Floor Coatings to Revamp Your Space?",
+    image: "/images/What-Are-the-Best-Garage-Floor-Coatings-to-Revamp-Your-Space-1.jpg",
+    description:
+      "By applying the fitting garage floor coatings, you can hoist the appearance and working of your carport, transforming it into an alluring and dependable region, instead of a plain and dull one",
+    category: "January 30, 2024",
+    readTime: "",
+    link: "/what-are-the-best-garage-floor-coatings-to-revamp-your-space",
+  }
+  ,
+  {
+    title:
+      "How to Secure a Convenient Parking at the Airport in Tampa",
+    image: "/images/How-to-Secure-a-Convenient-Parking-at-the-Airport-in-Tampa-2.jpg",
+    description:
+      "Traveling can be an outright exhilarating campaign, yet the common parts of arriving at the air terminal and finding a fitting stop can periodically be an irritation.",
+    category: "January 24, 2024",
+    readTime: "",
+    link: "/how-to-secure-a-convenient-parking-at-the-airport-in-tampa",
+  }
+  ,
+  {
+    title:
+      "The Ultimate Guide to Protecting Your Floors and Why You Need Floor Coating",
+    image: "/images/Guide-to-Protecting-Your-Floors-and-Why-You-Need-Floor-Coating-1.jpg",
+    description:
+      "Your floors serve as the foundation of your living space, reflecting your style and contributing to the general stylish of your home or business. Be that as it may, day-by-day",
+    category: "January 2, 2024",
+    readTime: "",
+    link: "/guide-to-protecting-your-floors-and-why-you-need-floor-coating",
+  }
+  ,
+  {
+    title:
+      "What Maintenance Does Epoxy Flooring Require?",
+    image: "/images/What-Maintenance-Does-Epoxy-Flooring-Require-1.jpg",
+    description:
+      "Epoxy flooring has created significant popularity among consumers as well as companies due to its exceptional reliability, flexibility, and visual attractiveness. For those who have already",
+    category: "December 25, 2023",
+    readTime: "",
+    link: "/what-maintenance-does-epoxy-flooring-require",
+  }
+  ,
+  {
+    title:
+      "How can patio coating transform your outdoor space?",
+    image: "/images/How-can-patio-coating-transform-your-outdoor-space-2.jpg",
+    description:
+      "Think of your outdoor space as a retreat an extension of your home where you relax, socialize, and connect with nature. Picture a patio that not only adds to the beauty but transforms",
+    category: "December 20, 2023",
+    readTime: "",
+    link: "/how-can-patio-coating-transform-your-outdoor-space",
+  }
+  ,
   
 
   // Add more blog posts as needed How Car Detailing Service Can Preserve Your Car’s Value
