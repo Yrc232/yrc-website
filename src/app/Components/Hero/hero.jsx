@@ -75,7 +75,7 @@ const Hero = ({ topRef }) => {
             Live an aesthetic experience with Tampa floor coating company that
             endure for centuries. YRC Custom Flooring in Tampa is bringing class
             and posh to your floors with skilled craftsmanship and dedication.
-            We offer a vast selection of high-quality materials to suit your
+            We offer a vast selection of high-quality material to suit your
             unique style and needs.
           </motion.p>
           <motion.div className="mt-6" variants={itemVariants}>
